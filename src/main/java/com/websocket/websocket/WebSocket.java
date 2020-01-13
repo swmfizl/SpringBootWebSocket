@@ -42,6 +42,8 @@ public class WebSocket {
 		this.id = id;
 		this.session = session;
 		webSocket.put(id, this);
+		// 检验后端能否正常给前端发送信息
+		sendMessageToId(this.id, "前端你好，我是后端，我正在通过WebSocket给你发送消息");
 		System.out.println(id + "接入连接");
 	}
 
